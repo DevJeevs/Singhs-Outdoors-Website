@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap");
+
+/*GLOBAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-family: "Roboto Slab";
+  scroll-behavior: smooth;
+}
+
+body {
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  width: 85%;
+  height: 95%;
+  margin: 0 auto;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  align-content: center;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  padding: 8px 12px;
+  float: left;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 100%;
+  font-size: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-links li {
+  margin-left: 10px;
+  padding-top: 23px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+  padding-top: 60px;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: purple;
+  display: block;
+  margin: auto;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 1000rem;
+}
+
+.text-box h1 {
+  font-size: 62px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 16px;
+  color: white;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background: purple;
+  transition: all 0.5s ease;
+}
+
+#menuToggler {
+  display: none;
+}
+/* MOBILE STYLES */
+
+@media screen and (max-width: 700px) {
+  /* applies to screens smaller than 700x */
+
+  .container {
+    width: 100%;
+  }
+
+  .text-box h1 {
+    font-size: 20px;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  #menuToggler {
+    color: white;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    font-size: 3em;
+    text-align: right;
+    line-height: 1em;
+    padding: 0 1rem;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  ul {
+    position: absolute;
+    background: purple;
+    text-align: left;
+    z-index: 2;
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+
+/* TABLET STYLES */
+
+@media screen and (max-width: 830px) {
+  /* applies to screens smaller than 800x */
+
+  .container {
+    width: 100%;
+  }
+
+  .text-box h1 {
+    font-size: 40px;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  #menuToggler {
+    color: white;
+    display: block;
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    margin: 10px;
+    font-size: 3em;
+    text-align: right;
+    line-height: 1em;
+    padding: 0 1rem;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  ul {
+    position: absolute;
+    background: purple;
+    text-align: left;
+    z-index: 2;
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 1000px) {
+  /* applies to screens wider than 999px */
+}
+
+/*activites*/
+
+.activities {
+  background-image: none;
+
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.activities h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+#activitiesText {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row {
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activities-col {
+  flex-basis: 31%;
+  background: rgb(202, 144, 89);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.activities-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/*Gallery*/
+
+.places {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  background: transparent;
+}
+
+#placesText {
+  color: white;
+}
+
+#placesTitle {
+  color: white;
+  font-size: 36px;
+}
+
+.places-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.places-col img {
+  width: 100%;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: white;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+/*jOIN uS*/
+
+.join-us {
+  margin: 100px auto;
+  width: 80%;
+  height: 60%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(SunsetHighSeat.jpeg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.join-us h1 {
+  color: white;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .join-us h1 {
+    font-size: 24px;
+  }
+}
+
+/*Image Slider*/
+
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid purple;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: purple;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: purple;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: purple;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: purple;
+}
+
+@media screen and (max-width: 700px) {
+  .slider {
+    display: flex;
+  }
+}
+
+/* Footer  */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background-image: none;
+  padding-bottom: 0;
+}
+
+.footer h4 {
+  color: white;
+}
+
+.website-rights {
+  color: white;
+}
